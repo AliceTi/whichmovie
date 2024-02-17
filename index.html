@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de Films</title>
+</head>
+<body>
+    <h1>DES FILMS ET DU LOVE</h1>
+    <h2>Test</h2>
+    <div id="a-ed"></div>
+    <h2>Test</h2>
+    <div id="a-list"></div>
+    <h2>Test</h2>
+    <div id="b-ed"></div>
+    <h2>Test</h2>
+    <div id="b-list"></div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function ListAliceWatched() {
+        // La liste des films en texte brut
+        //ALICE WATCHED
+        var filmsTexteAliceWatched = `
+            Don't Worry Darling
+            Triangle of Sadness
+            Black Panther
+            American Psycho
+            Parasite
+            The Batman
+            Whiplash
+            Midsommar
+            Get Out
+            Interstellar
+            The Shining
+            Bullet Train
+            Pulp Fiction
+            Joker
+            Eternal Sunshine of the Spotless Mind
+            The Grand Budapest Hotel
+            Spider-Man: No Way Home
+            The Dark Knight
+            Spider-Man: Into the Spider-Verse
+            Inception
+            Spirited Away
+            Gone Girl
+            Lady Bird
+            The Perks of Being a Wallflower
+            10 Things I Hate About You
+            Fantastic Mr. Fox
+            The Silence of the Lambs
+            Inglourious Basterds
+            Dead Poets Society
+            Dune
+            Kill Bill: Vol. 1
+            Little Women
+            Shutter Island
+            Once Upon a Time… in Hollywood
+            Avengers: Infinity War
+            Ratatouille
+            Us
+            Django Unchained
+            Avengers: Endgame
+            Coraline
+            (500) Days of Summer
+            Her
+            Baby Driver
+            Coco
+            Scott Pilgrim vs. the World
+            The Matrix
+            Jojo Rabbit
+            Amsterdam
+            The Northman
+            The Autopsy
+            The Lord of the Rings: The Fellowship of the Ring
+            Howl's Moving Castle
+            Little Miss Sunshine
+            Don't Look Up
+            Back to the Future
+            A Clockwork Orange
+            Elvis
+            Mean Girls
+            Guardians of the Galaxy
+            It
+            Harry Potter and the Prisoner of Azkaban
+            1917
+            Harry Potter and the Philosopher's Stone
+            The Nightmare Before Christmas
+            Good Will Hunting
+            Star Wars
+            The French Dispatch
+            Before Sunrise
+            Up
+            Prisoners
+            2001: A Space Odyssey
+            WALL·E
+            The Thing
+            Psycho
+            Thor: Ragnarok
+            Moonrise Kingdom
+            Spider-Man: Homecoming
+            The Breakfast Club
+            Requiem for a Dream
+            Soul
+            Inside Out
+            Lot 36
+            V for Vendetta
+            The Outside
+            Graveyard Rats
+            My Neighbor Totoro
+            Notting Hill
+            Spider-Man: Far from Home
+            Dunkirk
+            Titanic
+            About Time
+            Corpse Bride
+            Twilight
+            The Royal Tenenbaums
+            Pride & Prejudice
+            The Avengers
+            Alien
+            Spider-Man
+            The Devil Wears Prada
+            Shrek
+            The Lord of the Rings: The Return of the King
+            Catch Me If You Can
+            Doctor Strange
+            The Lord of the Rings: The Two Towers
+            Tenet
+            Marriage Story
+            Jennifer's Body
+            Toy Story
+            Mad Max: Fury Road
+            Zodiac
+            Harry Potter and the Chamber of Secrets
+            Monsters, Inc.
+            Edward Scissorhands
+            Harry Potter and the Goblet of Fire
+            Jurassic Park
+            Spider-Man 2
+            Amélie
+            Léon: The Professional
+            Finding Nemo
+            The Murmuring
+            Captain America: The Winter Soldier
+            In Bruges
+            Ferris Bueller's Day Off
+            Guardians of the Galaxy Vol. 2
+            Home Alone
+            The Dark Knight Rises
+            Bohemian Rhapsody
+            Schindler's List
+            The Suicide Squad
+            Princess Mononoke
+            Turning Red
+            Eternals
+            Batman Begins
+            Harry Potter and the Deathly Hallows: Part 2
+            Harry Potter and the Order of the Phoenix
+            Tangled
+            Split
+            The Lion King
+            Ex Machina
+            Trainspotting
+            The Prestige
+            Avengers: Age of Ultron
+            Dreams in the Witch House
+            Star Wars: Episode III – Revenge of the Sith
+            Suspiria
+            Brokeback Mountain
+            Encanto
+            Harry Potter and the Half-Blood Prince
+            Mamma Mia!
+            Star Wars: The Force Awakens
+            Harry Potter and the Deathly Hallows: Part 1
+            Kill Bill: Vol. 2
+            Return of the Jedi
+            The Pianist
+            Captain Marvel
+            Pan's Labyrinth
+            E.T. the Extra-Terrestrial
+            Shrek 2
+            Ant-Man
+            Captain America: The First Avenger
+            The Sixth Sense
+            The Hunger Games: Catching Fire
+            Logan
+            The Great Gatsby
+            The Lobster
+            Birdman or (The Unexpected Virtue of Ignorance)
+            Before Sunset
+            Train to Busan
+            Zootopia
+            Shaun of the Dead
+            Pirates of the Caribbean: The Curse of the Black Pearl
+            The Amazing Spider-Man
+            Toy Story 3
+            It Chapter Two
+            The Hateful Eight
+            Luca
+            Star Wars: Episode I – The Phantom Menace
+            Charlie and the Chocolate Factory
+            Iron Man 3
+            Star Wars: The Last Jedi
+            Iron Man 2
+            The Revenant
+            Megamind
+            13 Going on 30
+            Annihilation
+            Ponyo
+            Morbius
+            Spider-Man 3
+            Thor
+            How to Train Your Dragon
+            One Flew Over the Cuckoo's Nest
+            Gladiator
+            BlacKkKlansman
+            Toy Story 2
+            Good Time
+            Big Hero 6
+            The Green Mile
+            Suicide Squad
+            Grave of the Fireflies
+            Cars
+            Three Billboards Outside Ebbing, Missouri
+            Legally Blonde
+            Die Hard
+            Raiders of the Lost Ark
+            Star Wars: Episode II – Attack of the Clones
+            The Notebook
+            Star Wars: The Rise of Skywalker
+            Frozen
+            Dahmer – Monster: The Jeffrey Dahmer Story
+            Moana
+            Hocus Pocus 2
+            Thor: The Dark World
+            The Hangover
+            Children of Men
+            Sorry to Bother You
+            Kung Fu Panda
+            Over the Garden Wall
+            School of Rock
+            The Amazing Spider-Man 2
+            The Lego Movie
+            Kingsman: The Secret Service
+            The Darjeeling Limited
+            The Princess Diaries
+            What We Do in the Shadows
+            Love Actually
+            Wonder Woman
+            Alice in Wonderland
+            No Time to Die
+            The Hunger Games: Mockingjay – Part 1
+            Toy Story 4
+            Pitch Perfect
+            Grease
+            Elf
+            Squid Game
+            Hot Fuzz
+            Snowpiercer
+            Zombieland
+            Silver Linings Playbook
+            The Curious Case of Benjamin Button
+            Jurassic World Dominion
+            10 Cloverfield Lane
+            Ghostbusters
+            Terminator 2: Judgment Day
+            Scooby-Doo
+            Bird Box
+            Men in Black
+            Wreck-It Ralph
+            The Terminator
+            Bram Stoker's Dracula
+            Now You See Me
+            Nocturnal Animals
+            A Star Is Born
+            The Emperor's New Groove
+            The Lego Batman Movie
+            Doctor Sleep
+            Brave
+            Another Round
+            Man of Steel
+            The Hunger Games: Mockingjay – Part 2
+            The Twilight Saga: New Moon
+            The Hobbit: An Unexpected Journey
+            Batman v Superman: Dawn of Justice
+            Moon Knight
+            Hocus Pocus
+            Loki
+            The Greatest Showman
+            The Addams Family
+            Skyfall
+            Before Midnight
+            House of Gucci
+            Aliens
+            American History X
+            12 Years a Slave
+            Ice Age
+            Aladdin
+            Fantastic Beasts and Where to Find Them
+            White Chicks
+            Despicable Me
+            Freaky Friday
+            Monsters University
+            Enchanted
+            Pirates of the Caribbean: Dead Man's Chest
+            Hercules
+            Nosferatu
+            Lilo & Stitch
+            Finding Dory
+            Swiss Army Man
+            Snatch
+            Aquaman
+            Orphan
+            The Maze Runner
+            Madagascar
+            The Falcon and the Winter Soldier
+            The Chronicles of Narnia: The Lion, the Witch and the Wardrobe
+            Rango
+            Ocean's Eight
+            Me Before You
+            Jurassic World
+            Night at the Museum
+            Beauty and the Beast
+            Nightmare Alley
+            Dirty Dancing
+            Jumanji: Welcome to the Jungle
+            The Mask
+            The Mist
+            The Platform
+            Fantastic Beasts: The Secrets of Dumbledore
+            The Twilight Saga: Eclipse
+            Gremlins
+            Rocketman
+            Solo: A Star Wars Story
+            The Iron Giant
+            The Hobbit: The Desolation of Smaug
+            The Proposal
+            Frozen II
+            The Intouchables
+            X-Men: First Class
+            The Mitchells vs. The Machines
+            Ted
+            Bo Burnham: Inside
+            World War Z
+            Castle in the Sky
+            Pirates of the Caribbean: At World's End
+            Big Fish
+            Edge of Tomorrow
+            The Twilight Saga: Breaking Dawn – Part 2
+            The Twilight Saga: Breaking Dawn – Part 1
+            The Little Mermaid
+            Into the Wild
+            Slumdog Millionaire
+            Indiana Jones and the Temple of Doom
+            The Hobbit: The Battle of the Five Armies
+            A Bug's Life
+            The Haunting of Hill House
+            Crimson Peak
+            Love, Rosie
+            Captain Fantastic
+            Cars 2
+            Project X
+            Cloudy with a Chance of Meatballs
+            Rush Hour
+            Fear and Loathing in Las Vegas
+            Sherlock Holmes
+            Jumanji
+            I Am Legend
+            Bee Movie
+            Shrek the Third
+            The Fault in Our Stars
+            How to Train Your Dragon 2
+            The Devil All the Time
+            Les Misérables
+            Maleficent
+            The Matrix Reloaded
+            Rise of the Planet of the Apes
+            The Fifth Element
+            Divergent
+            The 40 Year Old Virgin
+            High School Musical
+            Sweeney Todd: The Demon Barber of Fleet Street
+            Justice League
+            Kung Fu Panda 2
+            We're the Millers
+            Transformers
+            Pacific Rim
+            Chernobyl
+            Kingsman: The Golden Circle
+            Happy Feet
+            Robots
+            Beauty and the Beast
+            Raya and the Last Dragon
+            Ralph Breaks the Internet
+            Who Framed Roger Rabbit
+            Grown Ups
+            The Last Duel
+            Klaus
+            Addams Family Values
+            Signs
+            Oblivion
+            I Care a Lot
+            X-Men: Apocalypse
+            Hotel Transylvania
+            The Simpsons Movie
+            Bridget Jones's Diary
+            The SpongeBob SquarePants Movie
+            Tarzan
+            22 Jump Street
+            Fantastic Beasts: The Crimes of Grindelwald
+            Scooby-Doo 2: Monsters Unleashed
+            Bolt
+            Anna Karenina
+            All Too Well: The Short Film
+            The Karate Kid
+            Austin Powers: International Man of Mystery
+            Despicable Me 2
+            Minions
+            The Help
+            Spectre
+            The Princess Diaries 2: Royal Engagement
+            Prometheus
+            The King's Man
+            Pirates of the Caribbean: On Stranger Tides
+            Burn After Reading
+            Jurassic World: Fallen Kingdom
+            Red Notice
+            You've Got Mail
+            Indiana Jones and the Kingdom of the Crystal Skull
+            Snow White and the Seven Dwarfs
+            Shrek Forever After
+            The Matrix Revolutions
+            Chicken Little
+            The Lost World: Jurassic Park
+            Blue Is the Warmest Color
+            The World's End
+            Treasure Planet
+            Alvin and the Chipmunks
+            Pineapple Express
+            Sausage Party
+            Chicken Run
+            The Prince of Egypt
+            Shark Tale
+            Modern Times
+            The Interview
+            Pirates of the Caribbean: Dead Men Tell No Tales
+            How to Train Your Dragon: The Hidden World
+            High School Musical 2
+            Cloverfield
+            Passengers
+            Frankenweenie
+            Brother Bear
+            Rio
+            A Cinderella Story
+            Yes Man
+            Kong: Skull Island
+            Bambi
+            Tokyo Godfathers
+            Atlantis: The Lost Empire
+            The Wolverine
+            Anastasia
+            The Danish Girl
+            Miss Peregrine's Home for Peculiar Children
+            War Dogs
+            The Lorax
+            Gattaca
+            X-Men Origins: Wolverine
+            Friends with Benefits
+            Mrs. Doubtfire
+            Pocahontas
+            The Hangover Part II
+            Meet the Robinsons
+            Godzilla
+            Bruce Almighty
+            Rise of the Guardians
+            The Ballad of Buster Scruggs
+            Percy Jackson & the Olympians: The Lightning Thief
+            The Sea Beast
+            X-Men: The Last Stand
+            The Ritual
+            Hook
+            Fantastic Four
+            Zoolander
+            ParaNorman
+            Ice Age: The Meltdown
+            My Life as a Zucchini
+            Fantasia
+            17 Again
+            Godzilla: King of the Monsters
+            Alita: Battle Angel
+            The Blind Side
+            Kubo and the Two Strings
+            Miss Congeniality
+            Sleeping Beauty
+            Sherlock Holmes: A Game of Shadows
+            Dumb and Dumber
+            The Hunchback of Notre Dame
+            Dark Phoenix
+            The Man from U.N.C.L.E.
+            The Village
+            Independence Day
+            The Da Vinci Code
+            Men in Black II
+            King Kong
+            The Haunting of Bly Manor
+            Four Weddings and a Funeral
+            Fifty Shades of Grey
+            Pitch Perfect 2
+            Peter Pan
+            One Hundred and One Dalmatians
+            Cinderella
+            The Aristocats
+            Men in Black 3
+            Maze Runner: The Death Cure
+            Hotel Transylvania 2
+            The Muppets
+            Cloud Atlas
+            The Dictator
+            Big
+            The Karate Kid
+            Wallace & Gromit: The Curse of the Were-Rabbit
+            Meet the Parents
+            Midnight Mass
+            Liar Liar
+            The Intern
+            The King of Staten Island
+            Warm Bodies
+            A Christmas Carol
+            Ice Age: Dawn of the Dinosaurs
+            The Cat in the Hat
+            Dark Shadows
+            In Time
+            2012
+            Transformers: Revenge of the Fallen
+            A Goofy Movie
+            I, Robot
+            Ace Ventura: Pet Detective
+            The Day After Tomorrow
+            Billy Elliot
+            The Chronicles of Narnia: Prince Caspian
+            High School Musical 3: Senior Year
+            The Jungle Book
+            Remember Me
+            Night at the Museum: Battle of the Smithsonian
+            Nosferatu the Vampyre
+            Lemony Snicket's A Series of Unfortunate Events
+            Jurassic Park III
+            The Secret Life of Pets
+            Madagascar 3: Europe's Most Wanted
+            Cube
+            Black Mirror: Bandersnatch
+            Spider-Man: Across the Spider-Verse
+            Super 8
+            Transformers: Dark of the Moon
+            Stuart Little
+            Love and Monsters
+            Death Note
+            Monsters vs Aliens
+            Zathura: A Space Adventure
+            Chronicle
+            Carrie
+            Fantastic Four: Rise of the Silver Surfer
+            Predestination
+            Despicable Me 3
+            Sucker Punch
+            Speed Racer
+            The Lego Movie 2: The Second Part
+            The New Mutants
+            Kick-Ass 2
+            Hancock
+            Insurgent
+            Robin Hood
+            Green Lantern
+            Wayne's World
+            The Boss Baby
+            Aquamarine
+            Austin Powers in Goldmember
+            The Road to El Dorado
+            Spirit: Stallion of the Cimarron
+            I Lost My Body
+            9
+            Hoodwinked!
+            Ice Age: Continental Drift
+            Transformers: Age of Extinction
+            Alice Through the Looking Glass
+            Camp Rock
+            Knocked Up
+            Mulan
+            Wolf Children
+            The Last Airbender
+            Fantastic Four
+            Garfield
+            The Chronicles of Narnia: The Voyage of the Dawn Treader
+            After
+            Lemonade Mouth
+            Alvin and the Chipmunks: The Squeakquel
+            Black Mirror: San Junipero
+            Barbie as The Princess & the Pauper
+            No Strings Attached
+            Bad Boys
+            Elysium
+            Marley & Me
+            Hulk
+            Duel
+            The Eyes of Tammy Faye
+            The Fox and the Hound
+            Idiocracy
+            Real Steel
+            Peter Pan
+            Pitch Perfect 3
+            Nosferatu
+            Paul
+            Van Helsing
+            Meet the Fockers
+            Bao
+            Night at the Museum: Secret of the Tomb
+            Die Hard: With a Vengeance
+            Allegiant
+            Percy Jackson: Sea of Monsters
+            The Smurfs
+            Transformers: The Last Knight
+            #Alive
+            Chappie
+            Die Hard 2
+            I Came By
+            Burlesque
+            The Dead Don't Die
+            Made of Honor
+            Terminator 3: Rise of the Machines
+            Extremely Wicked, Shockingly Evil and Vile
+            The Santa Clause 2
+            Jack and Jill
+            Turbo
+            Circle
+            Snow White and the Huntsman
+            Bedtime Stories
+            Maid
+            The Other Woman
+            Death Note
+            Legally Blonde 2: Red, White & Blonde
+            Daddy's Home
+            Barbie in The 12 Dancing Princesses
+            The Lion King II: Simba's Pride
+            Ghost in the Shell
+            Charlie's Angels
+            Love, Death & Robots: Bad Travelling
+            Valerian and the City of a Thousand Planets
+            Match Point
+            Willow
+            Pain & Gain
+            Babe
+            Star Trek Beyond
+            Valentine's Day
+            Trolls
+            Journey to the Center of the Earth
+            National Treasure: Book of Secrets
+            The Perfection
+            Open Season
+            The Expendables
+            The Sisterhood of the Traveling Pants
+            Tall Girl
+            Tomorrowland
+            101 Dalmatians
+            Mr. Bean's Holiday
+            365 Days
+            Leap Year
+            The Santa Clause 3: The Escape Clause
+            Terminator: Dark Fate
+            Nanny McPhee
+            The Last Song
+            Clash of the Titans
+            Terminator Salvation
+            The Land Before Time
+            Mr. Popper's Penguins
+            The Christmas Chronicles
+            The Karate Kid Part II
+            Underworld
+            Black Mirror: White Christmas
+            Eurovision Song Contest: The Story of Fire Saga
+            The Tinder Swindler
+            Dinosaur
+            Roald Dahl's The Witches
+            Terminator Genisys
+            The Man from Earth
+            Black Mirror: Nosedive
+            Land of the Lost
+            Superman Returns
+            The Wave
+            1922
+            The Golden Compass
+            The Triplets of Belleville
+            Bad Boys for Life
+            Bridget Jones's Baby
+            The Boxtrolls
+            Panayotis Pascot: Almost
+            The Game Plan
+            Journey 2: The Mysterious Island
+            Mirror Mirror
+            Black Mirror: Hang the DJ
+            Sid & Nancy
+            Fifty Shades Darker
+            Charlotte's Web
+            The Lone Ranger
+            Barbie in the Nutcracker
+            Prince of Persia: The Sands of Time
+            Jupiter Ascending
+            Excalibur
+            Maniac
+            Horns
+            The Cloverfield Paradox
+            Love, Death & Robots: Jibaro
+            Black Mirror: White Bear
+            After Earth
+            The Lion King 1½
+            The Mortal Instruments: City of Bones
+            Wizards of Waverly Place: The Movie
+            Black Mirror: Fifteen Million Merits
+            The Black Cauldron
+            The Motorcycle Diaries
+            Bridget Jones: The Edge of Reason
+            Jason Bourne
+            The Heat
+            The Number 23
+            Warcraft
+            Nineteen Eighty-Four
+            After We Collided
+            Armageddon Time
+            Black Panther: Wakanda Forever
+            The Good Boss
+            Wild Child
+            Girl, Interrupted
+            I, Tonya
+            Pinocchio
+            Dumbo
+            The Sound of Music
+            Fight Club
+            Forrest Gump
+            The Empire Strikes Back
+            The Fundamentals of Caring
+            The Good Nurse
+            The Willoughbys
+            Valiant
+            Paws of Fury: The Legend of Hank
+            Guillermo del Toro's Pinocchio
+            Avatar
+            Captain America: Civil War
+            Knives Out
+            The Nanny Diaries
+            Complete Unknown
+            Slumberland
+            The Hollars
+            Azur & Asmar: The Princes' Quest
+            The Incredibles
+            Mulan
+            Porco Rosso
+            The Spectacular Now
+            The Truman Show
+            Bridge to Terabithia
+            Arrival
+            The Chorus
+            The Imitation Game
+            Garfield: A Tail of Two Kitties
+            The Nice Guys
+            Mamma Mia! Here We Go Again
+            The Old Guard
+            Gerald's Game
+            The Wonder
+            Indiana Jones and the Last Crusade
+            Mr. Harrigan's Phone
+            Avatar: The Way of Water
+            The Laundromat
+            Babylon
+            TÁR
+            Everything Everywhere All at Once
+            The Menu
+            The Princess and the Frog
+            Aftersun
+            I'm Thinking of Ending Things
+            65
+            Suzume
+            Jeanne du Barry
+            The Super Mario Bros. Movie
+            Dungeons & Dragons: Honor Among Thieves
+            La Flamme
+            Jack Mimoun & the Secrets of Val Verde
+            Iron Man
+            The Hunger Games
+            Incredibles 2
+            Glass Onion
+            Reservoir Dogs
+            Room
+            Equals
+            (OO)
+            Podium
+            Black Mirror: Joan Is Awful
+            Black Mirror: Loch Henry
+            Black Mirror: Beyond the Sea
+            Black Mirror: Mazey Day
+            Black Mirror: Demon 79
+            The Secret World of Arrietty
+            Glass
+            Oppenheimer
+            Elemental
+            The Unbearable Weight of Massive Talent
+            DogMan
+            The Fabelmans
+            The Whale
+            The Wonderful Story of Henry Sugar
+            The Boy and the Heron
+            Poison
+            The Swan
+            Nope
+            Mars Express
+            What's in a Name
+            Baptiste Lecaplain - Voir les gens
+            Priscilla
+            See How They Run
+            The Bad Guys
+            The Host
+            Red Riding Hood
+            I Am Number Four
+            Beastly
+            `;
+        // Divisez le texte en lignes
+        var lignes = filmsTexteAliceWatched.split('\n').filter(function (ligne) {
+        return ligne.trim() !== ''; // Ignorez les lignes vides
+        });
+        // Créez une liste ul
+        var ulAliceWatched = document.createElement('ul');
+        ulAliceWatched.setAttribute('id','alice-watched');
+        var aEd = document.getElementById("a-ed");
+        aEd.appendChild(ulAliceWatched)
+        aEd.appendChild(document.createTextNode("Films déjà vus par Alice"));
+        // Ajoutez chaque ligne en tant qu'élément li à la liste ul
+        lignes.forEach(function (ligne) {
+        var liTexteAliceWatched = document.createElement('li');
+        liTexteAliceWatched.textContent = ligne.trim();
+        aEd.appendChild(liTexteAliceWatched);
+        });
+        // Ajoutez la liste ul au corps du document
+        document.body.appendChild(ulAliceWatched);
+    });
+    
+    document.addEventListener("DOMContentLoaded", function ListAliceWatchlist() {
+        // La liste des films en texte brut
+        var filmsTexteAliceWatchlist = `
+            Black Swan
+            Top Gun: Maverick
+            La La Land
+            The Wolf of Wall Street
+            The Godfather
+            The Social Network
+            No Country for Old Men
+            Last Night in Soho
+            Eyes Wide Shut
+            When Harry Met Sally...
+            Portrait of a Lady on Fire
+            Deadpool
+            Lost in Translation
+            Juno
+            The Worst Person in the World
+            Jaws
+            Scarface
+            The Rocky Horror Picture Show
+            American Beauty
+            Watcher
+            There Will Be Blood
+            John Wick
+            La Haine
+            Your Name.
+            Saving Private Ryan
+            Beetlejuice
+            It Follows
+            Close
+            The Godfather: Part II
+            12 Angry Men
+            Blonde
+            Ocean's Eleven
+            Suspiria
+            The Big Lebowski
+            Fargo
+            Rogue One: A Star Wars Story
+            mother!
+            Vertigo
+            Isle of Dogs
+            The Shape of Water
+            Emma.
+            The Martian
+            Palm Springs
+            Top Gun
+            Blue Velvet
+            Kiki's Delivery Service
+            Men
+            The Killing of a Sacred Deer
+            Akira
+            Cruella
+            mid90s
+            Uncharted
+            Titane
+            Crazy, Stupid, Love.
+            The Irishman
+            Easy A
+            The Princess Bride
+            Mr. & Mrs. Smith
+            Venom
+            Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)
+            The Cabin in the Woods
+            WandaVision
+            The Queen's Gambit
+            Lightyear
+            The Good, the Bad and the Ugly
+            Ready Player One
+            Rocky
+            The Lost City
+            Being John Malkovich
+            John Wick: Chapter 2
+            The Usual Suspects
+            Paddington
+            The Invisible Man
+            Spirited
+            Gravity
+            Boyhood
+            Sick of Myself
+            The Hunt
+            The Parent Trap
+            Matilda
+            Life of Pi
+            Sicario
+            Zack Snyder's Justice League
+            Groundhog Day
+            The Polar Express
+            Neon Genesis Evangelion: The End of Evangelion
+            Interview with the Vampire
+            Normal People
+            We Need to Talk About Kevin
+            Nomadland
+            Venom: Let There Be Carnage
+            Creed
+            Green Book
+            Orphan: First Kill
+            The Game
+            The Pursuit of Happyness
+            The Life Aquatic with Steve Zissou
+            A Silent Voice
+            Minority Report
+            8 Mile
+            The Theory of Everything
+            Okja
+            Thelma & Louise
+            Watchmen
+            Labyrinth
+            The Skin I Live In
+            Godzilla vs. Kong
+            The Machinist
+            Ghost in the Shell
+            Moonage Daydream
+            The Goonies
+            The Master
+            The Mummy
+            Mommy
+            Ocean's Twelve
+            Lucy
+            Sonic the Hedgehog 2
+            Ad Astra
+            Natural Born Killers
+            Onward
+            The Neon Demon
+            300
+            Unbreakable
+            Batman Returns
+            District 9
+            Judas and the Black Messiah
+            Lawrence of Arabia
+            Tropic Thunder
+            Close Encounters of the Third Kind
+            Braveheart
+            Step Brothers
+            What's Eating Gilbert Grape
+            The King
+            The Talented Mr. Ripley
+            The Terminal
+            Gangs of New York
+            Anchorman: The Legend of Ron Burgundy
+            Constantine
+            Pink Flamingos
+            The Tale of the Princess Kaguya
+            Looper
+            Sing Street
+            Dawn of the Planet of the Apes
+            Obi-Wan Kenobi
+            Inside Man
+            The Disaster Artist
+            Persepolis
+            Zombieland: Double Tap
+            He's Just Not That Into You
+            Spring Breakers
+            Life of Brian
+            Sin City
+            Ghostbusters: Afterlife
+            Ocean's Thirteen
+            The Guilty
+            Happiest Season
+            Sonic the Hedgehog
+            Barbie
+            The Bling Ring
+            Neon Genesis Evangelion
+            Pokémon Detective Pikachu
+            The Devil's Advocate
+            American Sniper
+            The Thin Red Line
+            Little Women
+            The Bodyguard
+            The Lovely Bones
+            Sing 2
+            Twin Peaks
+            127 Hours
+            Paterson
+            Face/Off
+            Million Dollar Baby
+            High Life
+            Basic Instinct
+            Spiderhead
+            Space Jam
+            At Eternity's Gate
+            Holidate
+            Cowboy Bebop
+            Jujutsu Kaisen 0
+            Kung Fu Panda 3
+            Rush
+            Love & Other Drugs
+            Straight Outta Compton
+            To Kill a Mockingbird
+            James and the Giant Peach
+            A Knight's Tale
+            West Side Story
+            Hannibal
+            Memoria
+            Kill Your Darlings
+            Where the Wild Things Are
+            DodgeBall: A True Underdog Story
+            Batman Forever
+            Bad Times at the El Royale
+            Alien: Covenant
+            Star Trek
+            Atomic Blonde
+            Twin Peaks: The Return
+            The Card Counter
+            Call Jane
+            Nerve
+            Steve Jobs
+            The Kissing Booth
+            Diary of a Wimpy Kid
+            Hellboy
+            Alien³
+            The Croods
+            The Good Dinosaur
+            Dear Zoe
+            Inferno
+            Ghost
+            Mr. Nobody
+            Dune: Part Two
+            Last Christmas
+            The Founder
+            The Pink Panther
+            Armageddon
+            The Big Sick
+            Sharp Objects
+            Swallow
+            50/50
+            The Grinch
+            Gifted
+            Nacho Libre
+            The Last Samurai
+            Jackie
+            Still Alice
+            Ma
+            Contagion
+            Logan Lucky
+            Horton Hears a Who!
+            I Love You, Man
+            Pain and Glory
+            Into the Woods
+            Army of the Dead
+            Darkest Hour
+            Bridge of Spies
+            Apollo 13
+            Christopher Robin
+            Sense and Sensibility
+            Ted 2
+            Deep Water
+            What If
+            Infernal Affairs
+            The Artist
+            Confessions of a Teenage Drama Queen
+            Wonka
+            Talladega Nights: The Ballad of Ricky Bobby
+            Star Trek Into Darkness
+            Vesper
+            Better Days
+            The Little Things
+            Footloose
+            They/Them
+            Metal Lords
+            Scenes from a Marriage
+            Good Boys
+            I Want to Eat Your Pancreas
+            The Woman in the Window
+            Jingle All the Way
+            This Is England
+            To the Bone
+            Summer of 85
+            Tomboy
+            Disenchanted
+            Memoirs of a Geisha
+            Ben-Hur
+            Magic Mike
+            The Hills Have Eyes
+            The Squid and the Whale
+            Bride Wars
+            A Million Ways to Die in the West
+            The Two Popes
+            Scrooged
+            Umma
+            Big Little Lies
+            A Hard Day's Night
+            Underwater
+            Cry-Baby
+            Hitch
+            Anchorman 2: The Legend Continues
+            The Hours
+            Dark Waters
+            Guardians of the Galaxy Vol. 3
+            Cats
+            Paper Towns
+            The Miseducation of Cameron Post
+            A Beautiful Day in the Neighborhood
+            After Ever Happy
+            Official Competition
+            The Pirates! In an Adventure with Scientists!
+            Plus One
+            Oz the Great and Powerful
+            Strange Days
+            I Origins
+            Studio 666
+            The BFG
+            Bombshell
+            Eat Pray Love
+            Black Mirror: Shut Up and Dance
+            Always Be My Maybe
+            Biutiful
+            Tron
+            Man on the Moon
+            Get Smart
+            Whip It
+            A Taxi Driver
+            Inside the Mind of a Cat
+            Long Shot
+            Frida
+            Dorian Gray
+            On the Rocks
+            Cosmopolis
+            Burnt
+            Maid in Manhattan
+            Serendipity
+            Deadpool 3
+            Why Him?
+            Blades of Glory
+            The Book Thief
+            All of Us Are Dead
+            Watchmen
+            The SpongeBob Movie: Sponge Out of Water
+            I'm Totally Fine
+            Little Women
+            Big Time Adolescence
+            The Map of Tiny Perfect Things
+            Love in the Villa
+            Asako I & II
+            The To Do List
+            Mary Queen of Scots
+            The Commuter
+            Dumbo
+            Through My Window
+            The Bucket List
+            Be Kind Rewind
+            Missing Link
+            Anger Management
+            The Cow
+            Saturday Night Fever
+            Weird: The Al Yankovic Story
+            My Policeman
+            Call Me by Your Name
+            Moon
+            Apocalypse Now
+            Tokyo Story
+            Do the Right Thing
+            The Little Prince
+            Violent Night
+            Emily the Criminal
+            Fred Claus
+            The Hollars
+            Perfect Blue
+            Whisper of the Heart
+            Mind Game
+            Nausicaä of the Valley of the Wind
+            Paprika
+            Ernest & Celestine
+            The Wind Rises
+            Fantastic Planet
+            The King and the Mockingbird
+            Loving Vincent
+            Atonement
+            The Farewell
+            Beautiful Boy
+            Dolemite Is My Name
+            Little Manhattan
+            Hot Rod
+            A Little Princess
+            Eddie the Eagle
+            The Skeleton Twins
+            Don't Breathe
+            Midnight Special
+            All Quiet on the Western Front
+            Marcel the Shell with Shoes On
+            My Father's Dragon
+            Strange World
+            Mrs. Harris Goes to Paris
+            Three Thousand Years of Longing
+            Taxi Driver
+            Superbad
+            Rear Window
+            Full Metal Jacket
+            Some Like It Hot
+            Truly Madly Deeply
+            Cha Cha Real Smooth
+            Women Talking
+            La Syndicaliste
+            A Ghost Story
+            Annette
+            Minari
+            Tetris
+            Asteroid City
+            Anatomy of a Fall
+            Life After Beth
+            While We're Young
+            Nimona
+            Joy Ride
+            The Creator
+            Fair Play
+            Nick and Norah's Infinite Playlist
+            Lemon
+            The Hunger Games: The Ballad of Songbirds & Snakes
+            The Animal Kingdom
+            Poor Things
+            Love Me
+            Saltburn
+            Godzilla Minus One
+            Squeezie : Merci Internet
+            Nous, les Leroy
+            Scrapper
+            Seven Psychopaths
+            Mr. Right
+            Strange Way of Life
+            Untitled Gladiator Sequel
+        `;
+        // Divisez le texte en lignes
+        var lignes = filmsTexteAliceWatchlist.split('\n').filter(function (ligne) {
+        return ligne.trim() !== ''; // Ignorez les lignes vides
+        });
+        // Créez une liste ul
+        var ulAliceWatchlist = document.createElement('ul');
+        ulAliceWatchlist.setAttribute('id','alice-watchlist');
+        var aList = document.getElementById("a-list");
+        aList.appendChild(ulAliceWatchlist)
+        aList.appendChild(document.createTextNode("Films qu'Alice aimerait voir"));
+        // Ajoutez chaque ligne en tant qu'élément li à la liste ul
+        lignes.forEach(function (ligne) {
+        var liTexteAliceWatchlist = document.createElement('li');
+        liTexteAliceWatchlist.textContent = ligne.trim();
+        aList.appendChild(liTexteAliceWatchlist);
+        });
+        // Ajoutez la liste ul au corps du document
+        document.body.appendChild(ulAliceWatchlist);
+    });
+
+    document.addEventListener("DOMContentLoaded", function ListBastienWatched() {
+        // La liste des films en texte brut
+        //BASTIEN WATCHED
+        var filmsTexteBastienWatched = `
+            Parasite
+            Joker
+            Fight Club
+            The Batman
+            Knives Out
+            Pulp Fiction
+            Spider-Man: Into the Spider-Verse
+            Inception
+            The Dark Knight
+            Interstellar
+            Whiplash
+            La La Land
+            The Wolf of Wall Street
+            Avengers: Infinity War
+            Gone Girl
+            Avengers: Endgame
+            Spirited Away
+            Inglourious Basterds
+            Black Panther
+            The Social Network
+            The Matrix
+            Django Unchained
+            The Silence of the Lambs
+            Se7en
+            Guardians of the Galaxy
+            Forrest Gump
+            Don't Look Up
+            Mad Max: Fury Road
+            1917
+            Shutter Island
+            Soul
+            The Lord of the Rings: The Fellowship of the Ring
+            Ratatouille
+            Deadpool
+            The Avengers
+            Inside Out
+            Drive
+            Back to the Future
+            Doctor Strange
+            Tenet
+            It
+            Captain America: Civil War
+            WALL·E
+            Iron Man
+            Harry Potter and the Prisoner of Azkaban
+            Captain America: The Winter Soldier
+            Spider-Man
+            Titanic
+            Toy Story
+            Harry Potter and the Philosopher's Stone
+            Reservoir Dogs
+            The Incredibles
+            Alien
+            The Dark Knight Rises
+            The Lord of the Rings: The Return of the King
+            Good Will Hunting
+            Bohemian Rhapsody
+            Avengers: Age of Ultron
+            Birdman or (The Unexpected Virtue of Ignorance)
+            The Suicide Squad
+            The Lord of the Rings: The Two Towers
+            Spider-Man 2
+            Finding Nemo
+            Logan
+            Batman Begins
+            Avatar
+            Monsters, Inc.
+            The Martian
+            Ant-Man
+            Scream
+            Captain America: The First Avenger
+            The Lion King
+            Shrek
+            Jaws
+            The Prestige
+            Harry Potter and the Chamber of Secrets
+            Split
+            Harry Potter and the Deathly Hallows: Part 2
+            The Hateful Eight
+            Eternals
+            Iron Man 3
+            Wonder Woman
+            Turning Red
+            Deadpool 2
+            Thor
+            The Hunger Games
+            Incredibles 2
+            Home Alone
+            Princess Mononoke
+            The Amazing Spider-Man
+            Toy Story 3
+            Iron Man 2
+            Suicide Squad
+            Harry Potter and the Deathly Hallows: Part 1
+            Zootopia
+            Triangle of Sadness
+            La Haine
+            Kingsman: The Secret Service
+            A Star Is Born
+            Ant-Man and the Wasp
+            Your Name.
+            Venom
+            The Imitation Game
+            Ready Player One
+            The Hunger Games: Catching Fire
+            The Amazing Spider-Man 2
+            Fantastic Beasts and Where to Find Them
+            12 Years a Slave
+            Skyfall
+            Sorry to Bother You
+            Batman v Superman: Dawn of Justice
+            Ford v Ferrari
+            X-Men: Days of Future Past
+            Ocean's Eight
+            Aquaman
+            21 Jump Street
+            Okja
+            The Hobbit: An Unexpected Journey
+            Man of Steel
+            The Hunger Games: Mockingjay – Part 1
+            X-Men: First Class
+            Kick-Ass
+            Alice in Wonderland
+            Justice League
+            The Hunger Games: Mockingjay – Part 2
+            World War Z
+            El Camino: A Breaking Bad Movie
+            Hidden Figures
+            Kingsman: The Golden Circle
+            Spectre
+            X-Men: Apocalypse
+            Kong: Skull Island
+            The Lion King
+            Captain Fantastic
+            Prometheus
+            Ted
+            22 Jump Street
+            The Intouchables
+            Rise of the Planet of the Apes
+            Dawn of the Planet of the Apes
+            Black Mirror: Bandersnatch
+            We're the Millers
+            Godzilla
+            Blue Is the Warmest Color
+            Dreams in the Witch House
+            The Autopsy
+            The Outside
+            Lot 36
+            Graveyard Rats
+            Dahmer – Monster: The Jeffrey Dahmer Story
+            Amsterdam
+            Don't Worry Darling
+            Bullet Train
+            Elvis
+            The Northman
+            Moon Knight
+            Spider-Man: No Way Home
+            Nightmare Alley
+            House of Gucci
+            Red Notice
+            No Time to Die
+            Squid Game
+            The Falcon and the Winter Soldier
+            Dark Phoenix
+            Godzilla: King of the Monsters
+            Guardians of the Galaxy Vol. 2
+            The Jungle Book
+            Fifty Shades of Grey
+            Divergent
+            The Wolverine
+            Kick-Ass 2
+            Now You See Me
+            Silver Linings Playbook
+            Ice Age: Continental Drift
+            Project X
+            Chronicle
+            Transformers: Dark of the Moon
+            Cars 2
+            Super 8
+            Kung Fu Panda 2
+            The Hangover Part II
+            Pirates of the Caribbean: On Stranger Tides
+            The Chronicles of Narnia: The Voyage of the Dawn Treader
+            Shrek Forever After
+            Percy Jackson & the Olympians: The Lightning Thief
+            2012
+            Zombieland
+            Harry Potter and the Half-Blood Prince
+            Ice Age: Dawn of the Dinosaurs
+            Transformers: Revenge of the Fallen
+            The Hangover
+            Night at the Museum: Battle of the Smithsonian
+            X-Men Origins: Wolverine
+            17 Again
+            The Curious Case of Benjamin Button
+            Yes Man
+            High School Musical 3: Senior Year
+            Bolt
+            Slumdog Millionaire
+            Hancock
+            Camp Rock
+            Kung Fu Panda
+            Indiana Jones and the Kingdom of the Crystal Skull
+            The Chronicles of Narnia: Prince Caspian
+            I Am Legend
+            Into the Wild
+            High School Musical 2
+            The Simpsons Movie
+            Harry Potter and the Order of the Phoenix
+            Transformers
+            Fantastic Four: Rise of the Silver Surfer
+            Pirates of the Caribbean: At World's End
+            Shrek the Third
+            Spider-Man 3
+            Night at the Museum
+            Death Note
+            Pirates of the Caribbean: Dead Man's Chest
+            X-Men: The Last Stand
+            The Da Vinci Code
+            Ice Age: The Meltdown
+            Cars
+            High School Musical
+            V for Vendetta
+            The Chronicles of Narnia: The Lion, the Witch and the Wardrobe
+            King Kong
+            Harry Potter and the Goblet of Fire
+            The 40 Year Old Virgin
+            Fantastic Four
+            Madagascar
+            Shark Tale
+            Garfield
+            The Day After Tomorrow
+            Shrek 2
+            Scooby-Doo 2: Monsters Unleashed
+            Tokyo Godfathers
+            The Matrix Revolutions
+            Brother Bear
+            Pirates of the Caribbean: The Curse of the Black Pearl
+            Bruce Almighty
+            The Matrix Reloaded
+            Men in Black II
+            Lilo & Stitch
+            Scooby-Doo
+            The Pianist
+            Spirit: Stallion of the Cimarron
+            Ice Age
+            Bridget Jones's Diary
+            The Emperor's New Groove
+            Snatch
+            Billy Elliot
+            Gladiator
+            Stuart Little
+            The Green Mile
+            Toy Story 2
+            Tarzan
+            Rush Hour
+            The Truman Show
+            Anastasia
+            Armageddon Time
+            Black Panther: Wakanda Forever
+            The Polar Express
+            Pinocchio
+            Babylon
+            TÁR
+            Puss in Boots: The Last Wish
+            Patients
+            Everything Everywhere All at Once
+            The Menu
+            Aftersun
+            Suzume
+            Jeanne du Barry
+            The Super Mario Bros. Movie
+            Spider-Man: Across the Spider-Verse
+            Cats & Dogs
+            Eternal Sunshine of the Spotless Mind
+            How to Train Your Dragon 2
+            How to Train Your Dragon
+            Charlie and the Chocolate Factory
+            The Great Gatsby
+            Podium
+            The Flash
+            2001: A Space Odyssey
+            The Secret World of Arrietty
+            Black Mirror: Joan Is Awful
+            Black Mirror: Loch Henry
+            Black Mirror: Beyond the Sea
+            Black Mirror: Demon 79
+            Get Out
+            See How They Run
+            Sisu
+            Oppenheimer
+            Elemental
+            Memento
+            The Fabelmans
+            The Whale
+            The Boy and the Heron
+            The Animal Kingdom
+            Mars Express
+            Priscilla
+            American Psycho
+            Transformers: Rise of the Beasts
+        `;
+        // Divisez le texte en lignes
+        var lignesTexteBastienWatched = filmsTexteBastienWatched.split('\n').filter(function (ligneTexteBastienWatched) {
+        return ligneTexteBastienWatched.trim() !== ''; // Ignorez les lignes vides
+        });
+        // Créez une liste ul
+        var ulBastienWatched = document.createElement('ul');
+        ulBastienWatched.setAttribute('id','bastien-watched');
+        var bEd = document.getElementById("b-ed");
+        bEd.appendChild(ulBastienWatched)
+        bEd.appendChild(document.createTextNode("Films que Bastien a vu"));
+        // Ajoutez chaque ligne en tant qu'élément li à la liste ul
+        lignesTexteBastienWatched.forEach(function (ligneTexteBastienWatched) {
+        var liTexteBastienWatched = document.createElement('li');
+        liTexteBastienWatched.textContent = ligneTexteBastienWatched.trim();
+        bEd.appendChild(liTexteBastienWatched);
+        });
+        // Ajoutez la liste ul au corps du document
+        document.body.appendChild(ulBastienWatched);
+    });
+
+    document.addEventListener("DOMContentLoaded", function ListBastienWatchlist() {
+        // La liste des films en texte brut
+        //BASTIEN WATCHLIST
+        var filmsTexteBastienWatchlist = `
+            Dune
+            Her
+            The Godfather
+            Kill Bill: Vol. 1
+            Black Swan
+            Nope
+            Up
+            No Country for Old Men
+            Fantastic Mr. Fox
+            Dead Poets Society
+            The French Dispatch
+            Jurassic Park
+            Zodiac
+            The Shape of Water
+            Prisoners
+            My Neighbor Totoro
+            Encanto
+            Howl's Moving Castle
+            Lost in Translation
+            Catch Me If You Can
+            Requiem for a Dream
+            The Revenant
+            Fargo
+            The Big Lebowski
+            Amélie
+            John Wick
+            Schindler's List
+            Luca
+            Mulholland Drive
+            Léon: The Professional
+            Kill Bill: Vol. 2
+            The Godfather: Part II
+            Saving Private Ryan
+            The Nightmare Before Christmas
+            The Grand Budapest Hotel
+            Once Upon a Time… in Hollywood
+            Isle of Dogs
+            Toy Story 4
+            Gravity
+            Frozen
+            Manchester by the Sea
+            Midnight in Paris
+            Finding Dory
+            Rocketman
+            The Greatest Showman
+            Brave
+            Swiss Army Man
+            The Hobbit: The Desolation of Smaug
+            Frozen II
+            Moneyball
+            The Hunt
+            Jurassic World: Fallen Kingdom
+            The Hobbit: The Battle of the Five Armies
+            Chernobyl
+            Glass
+            Argo
+            American Hustle
+            Hugo
+            Creed
+            20th Century Women
+            The Sea Beast
+            Jurassic World Dominion
+            Mulan
+            The Platform
+            How to Train Your Dragon: The Hidden World
+            Coco
+            War Dogs
+            The Interview
+            Wolf Children
+            Sherlock Holmes
+            Happy Feet
+            The Devil Wears Prada
+            Corpse Bride
+            American History X
+            Catwoman: The Feline Femme Fatale
+            The Son
+            The Lobster
+            Perfect Blue
+        `;
+            // Divisez le texte en lignes
+        var lignesTexteBastienWatchlist = filmsTexteBastienWatchlist.split('\n').filter(function (ligneTexteBastienWatchlist) {
+        return ligneTexteBastienWatchlist.trim() !== ''; // Ignorez les lignes vides
+        });
+        // Créez une liste ul
+        var ulBastienWatchlist = document.createElement('ul');
+        ulBastienWatchlist.setAttribute('id','bastien-watchlist');
+        var bList = document.getElementById("b-list");
+        bList.appendChild(ulBastienWatchlist)
+        bList.appendChild(document.createTextNode("Films que Bastien aimerait voir"));
+        // Ajoutez chaque ligne en tant qu'élément li à la liste ul
+        lignesTexteBastienWatchlist.forEach(function (ligneTexteBastienWatchlist) {
+        var liTexteBastienWatchlist = document.createElement('li');
+        liTexteBastienWatchlist.textContent = ligneTexteBastienWatchlist.trim();
+        bList.appendChild(liTexteBastienWatchlist);
+        });
+        // Ajoutez la liste ul au corps du document
+        document.body.appendChild(ulBastienWatchlist);
+    });
+
+    document.addEventListener("DOMContentLoaded", function DisplayCommonMovies() {
+    var aliceWatchlist = document.getElementById('alice-watchlist');
+    var bastienWatchlist = document.getElementById('bastien-watchlist');
+
+    if (aliceWatchlist && bastienWatchlist) {
+        var aliceMovies = Array.from(aliceWatchlist.getElementsByTagName('li')).map(li => li.textContent.trim());
+        var bastienMovies = Array.from(bastienWatchlist.getElementsByTagName('li')).map(li => li.textContent.trim());
+
+        var commonMovies = aliceMovies.filter(movie => bastienMovies.includes(movie));
+
+        if (commonMovies.length > 0) {
+            var commonMoviesList = document.createElement('ul');
+            commonMoviesList.setAttribute('id', 'common-movies');
+
+            // Ajoutez le texte à la div sans remplacer le contenu existant
+            document.body.appendChild(commonMoviesList);
+            commonMoviesList.appendChild(document.createTextNode("Films en commun dans les watchlists d'Alice et Bastien"));
+
+            commonMovies.forEach(function (movie) {
+                var li = document.createElement('li');
+                li.textContent = movie;
+                commonMoviesList.appendChild(li);
+            });
+        } else {
+            alert("Pas de films en commun dans les watchlists.");
+        }
+    }
+});
+document.addEventListener("DOMContentLoaded", function () {
+    ListAliceWatched();
+    ListAliceWatchlist();
+    ListBastienWatched();
+    ListBastienWatchlist();
+    DisplayCommonMovies(); // Nouvel appel pour afficher les films en commun
+});
+
+</script>
+</body>
+</html>
