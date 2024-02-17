@@ -1,0 +1,15 @@
+h1{font-family: 'Courier New', Courier, monospace; font-weight: bolder; font-size: 12pt;}
+h2{font-family: 'Courier New', Courier, monospace; font-weight: lighter; font-size: 12pt;}
+h3{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bolder; font-size:  12pt;}
+
+body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: lighter;font-size: 10pt;}
+
+.hide{display: none;}
+.overflow{height: 200px; width: 50%; overflow: scroll;}
+
+.container{width: 50vw;}
+
+/*
+table{}
+tr{}
+td{}
