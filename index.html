@@ -6,29 +6,6 @@
   <title>Tableau de Films</title>
 </head>
 <body>
-    <div id="filmsContainer"></div>
-
-    <script>
-        // Récupération du fichier CSV
-        fetch('/Users/alice/Documents/SYNCHRO/PERSO/letterboxd - watched A+B=♡.csv')
-            .then(response => response.text())
-            .then(data => {
-                // Traitement des données CSV
-                const films = data.trim().split('\n').slice(1);
-
-                // Génération du HTML
-                const html = films.map(film => {
-                    return `<div class="film">${film}</div>`;
-                }).join('');
-
-                // Affichage du HTML généré dans la page
-                document.getElementById('filmsContainer').innerHTML = html;
-            })
-            .catch(error => console.error('Erreur de chargement du fichier CSV:', error));
-    </script>
-</body>
-<!--
-<body>
     <h1>DES FILMS ET DU LOVE</h1>
     <h2>Test</h2>
     <div id="a-ed"></div>
@@ -1772,5 +1749,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </script>
 </body>
--->
 </html>
