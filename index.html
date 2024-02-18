@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>DES FILMS ET DU LOVE</h1>
-    <button id="showLists">Montrer tout</button>
+
     <div id="lists">
         <button id="showWatchlist">Watchlist d'Alice et Bastien</button>
             <div id="watchlist" class="hide">
@@ -12761,22 +12761,6 @@
                 afficheWatched = false;
             } else {
                 maDiv.style.display = "block";
-                afficheWatched = true;
-            }
-        });
-
-        document.getElementById("showLists").addEventListener("click", function() {
-            var maDivWatchlist = document.getElementById("watchlist");
-            var maDivWatched = document.getElementById("watched");
-            if (afficheWatchlist && afficheWatched) {
-                maDivWatchlist.style.display = "none";
-                afficheWatchlist = false;
-                maDivWatched.style.display = "none";
-                afficheWatched = false;
-            } else {
-                maDivWatchlist.style.display = "block";
-                afficheWatchlist = true;
-                maDivWatched.style.display = "block";
                 afficheWatched = true;
             }
         });
