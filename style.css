@@ -25,6 +25,8 @@ button{
     font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
     font-size: 12pt;
+    border: none;
+    border-radius: 8px;
 }
 
 .hide{display: none;}
@@ -35,8 +37,7 @@ button{
 td{border: yellow solid 2px;}
 
 #lists{
-    visibility: hidden;
-    display: flex;
+    display: none;
     flex-direction: row;
     align-items: center;
     justify-content:space-around;
