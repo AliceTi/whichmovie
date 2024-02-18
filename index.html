@@ -12765,17 +12765,20 @@
             }
         });
 
-        var boutonToggle = document.getElementById("showLists");
-        boutonToggle.addEventListener("click", function() {
-            var divs = document.querySelectorAll('.hide');
-            divs.forEach(function(div) {
-                if (div.classList.contains('hide')) {
-                    div.classList.remove('hide');
-                    div.style.display = "block";
-                } else {
-                    div.classList.add('hide');
-                }
-            });
+        document.getElementById("showLists").addEventListener("click", function() {
+            var maDivWatchlist = document.getElementById("watchlist");
+            var maDivWatched = document.getElementById("watched");
+            if (afficheWatchlist && afficheWatched) {
+                maDivWatchlist.style.display = "none";
+                afficheWatchlist = false;
+                maDivWatched.style.display = "none";
+                afficheWatched = false;
+            } else {
+                maDivWatchlist.style.display = "block";
+                afficheWatchlist = true;
+                maDivWatched.style.display = "block";
+                afficheWatched = true;
+            }
         });
     </script>
 </body>
