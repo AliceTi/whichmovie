@@ -1,15 +1,22 @@
-h1{font-family: 'Courier New', Courier, monospace; font-weight: 900; font-size: 24pt;}
-h2{font-family: 'Courier New', Courier, monospace; font-weight: 900; font-size: 12pt;}
-h3{font-family: 'Courier New', Courier, monospace; font-weight: 900; font-size:  12pt;}
+h1{
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: 900; 
+    font-size: 24pt; 
+    text-align: center;
+}
+h2{font-family: 'Courier New', Courier, monospace; font-weight: 600; font-size: 12pt;}
+h3{font-family: 'Courier New', Courier, monospace; font-weight: lighter; font-size: 12pt;}
 
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     font-weight: lighter;
     font-size: 10pt; 
-    display: flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: center;}
+    padding-top: 10vh;
+}
 
 #buttons{
     display: flex;
@@ -28,6 +35,9 @@ button{
     border: none;
     border-radius: 8px;
 }
+button:hover{
+    cursor: pointer;
+}
 
 #watchlist , #watched{display: none;}
 .overflow{height: 200px; overflow: scroll;}
@@ -36,13 +46,19 @@ button{
 
 td{border-bottom: yellow solid 2px;}
 
-#lists{
+#lists , #communes , #propal{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content:space-around;
 }
 
-tr:nth-child(1){
-    display: none;
+#propal div{
+    padding: 20px;
+    text-align: center;
+}
+
+#chaineAleatoire , #chaineAleatoireB{
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: 900; 
+    font-size: 18pt; 
+    text-align: center;
 }
