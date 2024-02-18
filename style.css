@@ -32,11 +32,11 @@ button{
 
 .container{width: 40vw; border: grey solid 2px; border-radius: 8px;}
 
-tr{border: yellow dotted 1px;}
+tr{border: yellow solid 2px;}
 
-#lists , #lists div{
-    display: flex;
+#lists{
+    display: none;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content:space-around;
 }

@@ -12,12 +12,12 @@
         <button id="showWatchlist">Watchlist d'Alice et Bastien</button>
         <button id="showWatched">Watched d'Alice et Bastien</button>
     </div>
-    
+
     <div id="lists">
             <div id="watchlist" class="hide">
                 <h2>Watchlist</h2>
+                <h3>Alice</h3>
                 <div id="a-list" class="container">
-                    <h3>Alice</h3>
                     <div id="table-watchlist-alice" class="overflow">   
                         <table>
                             <tr>
@@ -2573,8 +2573,8 @@
                         </table>
                     </div>
                 </div>
+                <h3>Bastien</h3>
                 <div id="b-list" class="container">
-                    <h3>Bastien</h3>
                     <div id="table-watchlist-bastien" class="overflow">
                         <table>
                             <tr>
@@ -3059,8 +3059,8 @@
 
             <div id="watched" class="hide">
                 <h2>Watched</h2>
+                <h3>Alice</h3>
                 <div id="a-ed" class="container">
-                    <h3>Alice</h3>
                     <div id="table-watched-alice" class="overflow">
                         <table>
                             <tr>
@@ -7902,8 +7902,8 @@
                         </table>
                     </div>
                 </div>
+                <h3>Bastien</h3>
                 <div id="b-ed" class="container">
-                    <h3>Bastien</h3>
                     <div id="table-watched-bastien" class="overflow">
                         <table>
                             <tr>
@@ -12752,7 +12752,7 @@
                 maDiv.style.display = "none";
                 afficheWatchlist = false;
             } else {
-                maDiv.style.display = "block";
+                maDiv.style.display = "flex";
                 afficheWatchlist = true;
             }
         });
@@ -12763,7 +12763,7 @@
                 maDiv.style.display = "none";
                 afficheWatched = false;
             } else {
-                maDiv.style.display = "block";
+                maDiv.style.display = "flex";
                 afficheWatched = true;
             }
         });
