@@ -12745,23 +12745,23 @@
 
         document.getElementById("showWatchlist").addEventListener("click", function() {
             var maDiv = document.getElementById("watchlist");
-            if (afficheDiv) {
+            if (afficheWatchlist) {
                 maDiv.style.display = "none";
-                afficheDiv = false;
+                afficheWatchlist = false;
             } else {
                 maDiv.style.display = "block";
-                afficheDiv = true;
+                afficheWatchlist = true;
             }
         });
 
         document.getElementById("showWatched").addEventListener("click", function() {
             var maDiv = document.getElementById("watched");
-            if (afficheDiv) {
+            if (afficheWatched) {
                 maDiv.style.display = "none";
                 afficheDiv = false;
             } else {
                 maDiv.style.display = "block";
-                afficheDiv = true;
+                afficheWatched = true;
             }
         });
 
