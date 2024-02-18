@@ -12749,10 +12749,10 @@
         document.getElementById("showWatchlist").addEventListener("click", function() {
             var maDiv = document.getElementById("watchlist");
             if (afficheWatchlist) {
-                maDiv.style.display = "none";
+                maDiv.style.visibility = "hidden";
                 afficheWatchlist = false;
             } else {
-                maDiv.style.display = "flex";
+                maDiv.style.visibility = "visible";
                 afficheWatchlist = true;
             }
         });
@@ -12760,10 +12760,10 @@
         document.getElementById("showWatched").addEventListener("click", function() {
             var maDiv = document.getElementById("watched");
             if (afficheWatched) {
-                maDiv.style.display = "none";
+                maDiv.style.visibility = "hidden";
                 afficheWatched = false;
             } else {
-                maDiv.style.display = "flex";
+                maDiv.style.visibility = "visible";
                 afficheWatched = true;
             }
         });
