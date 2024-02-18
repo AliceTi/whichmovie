@@ -12769,10 +12769,10 @@
         boutonToggle.addEventListener("click", function() {
             var divs = document.querySelectorAll('.hide');
             divs.forEach(function(div) {
-                if (div.classList.contains('hide')) {
-                    div.classList.remove('hide');
+                if (div.classList.contains('none')) {
+                    div.classList.remove('none');
                 } else {
-                    div.classList.add('hide');
+                    div.classList.add('none');
                 }
             });
         });
