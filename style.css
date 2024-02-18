@@ -1,15 +1,35 @@
-h1{font-family: 'Courier New', Courier, monospace; font-weight: bolder; font-size: 12pt;}
+h1{font-family: 'Courier New', Courier, monospace; font-weight: bolder; font-size: 24pt;}
 h2{font-family: 'Courier New', Courier, monospace; font-weight: lighter; font-size: 12pt;}
 h3{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bolder; font-size:  12pt;}
 
 body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: lighter;font-size: 10pt;}
 
+#buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    padding: 20px;
+    margin: 10px;
+    background-color: yellow;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    font-size: 12pt;
+}
+
 .hide{display: none;}
 .overflow{height: 200px; width: 50%; overflow: scroll;}
 
-.container{width: 50vw;}
+.container{width: 50vw; border: grey solid 2px;}
 
-/*
-table{}
-tr{}
-td{}
+tr{border: grey dotted 1px;}
+
+#lists{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
