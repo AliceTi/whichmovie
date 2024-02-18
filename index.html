@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1>DES FILMS ET DU LOVE</h1>
-    <button>Montrer tout</button>
-    <div id="listes">
-        <button id="showWatchlist">Montrer les watchlist d'Alice et Bastien</button>
+    <button id="showLists">Montrer tout</button>
+    <div id="lists">
+        <button id="showWatchlist">Watchlist d'Alice et Bastien</button>
             <div id="watchlist" class="hide">
                 <h2>Watchlist</h2>
                 <div id="a-list" class="container">
@@ -3052,9 +3052,8 @@
                     </div>
                 </div>
             </div>
-        <button id="hideWatchlist">Masquer les watchlist d'Alice et Bastien</button>
         
-        <button id="showWatched">Montrer les watched d'Alice et Bastien</button>
+        <button id="showWatched">Watched d'Alice et Bastien</button>
             <div id="watched" class="hide">
                 <h2>Watched</h2>
                 <div id="a-ed" class="container">
@@ -12738,31 +12737,44 @@
                     </div>
                 </div>
             </div>
-        <button id="hideWatched">Masquer les watched d'Alice et Bastien</button>
     </div>
 
-
-
-
     <script>
+        var afficheWatchlist = false;
+        var afficheWatched = false;
+
         document.getElementById("showWatchlist").addEventListener("click", function() {
             var maDiv = document.getElementById("watchlist");
-            maDiv.style.display = "block"; 
+            if (afficheDiv) {
+                maDiv.style.display = "none";
+                afficheDiv = false;
+            } else {
+                maDiv.style.display = "block";
+                afficheDiv = true;
+            }
         });
 
         document.getElementById("showWatched").addEventListener("click", function() {
             var maDiv = document.getElementById("watched");
-            maDiv.style.display = "block";
+            if (afficheDiv) {
+                maDiv.style.display = "none";
+                afficheDiv = false;
+            } else {
+                maDiv.style.display = "block";
+                afficheDiv = true;
+            }
         });
 
-        document.getElementById("hideWatchlist").addEventListener("click", function() {
-            var maDiv = document.getElementById("watchlist");
-            maDiv.style.display = "none";
-        });
-
-        document.getElementById("hideWatched").addEventListener("click", function() {
-            var maDiv = document.getElementById("watched");
-            maDiv.style.display = "none"; 
+        var boutonToggle = document.getElementById("showLists");
+        boutonToggle.addEventListener("click", function() {
+            var divs = document.querySelectorAll('.hide');
+            divs.forEach(function(div) {
+                if (div.classList.contains('hide')) {
+                    div.classList.remove('hide');
+                } else {
+                    div.classList.add('hide');
+                }
+            });
         });
     </script>
 </body>
